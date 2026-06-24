@@ -39,8 +39,10 @@ try:
         if ser.in_waiting > 0: # checks if data is available before trying to read it
             line = ser.readline().decode('utf-8').rstrip()
             if line:
-                room = get_room(line)
-                print(room)
+                room = get_room(line) ## get the room for publishing
+                
+                temperature = float(line[(line.find(">")):])
+                print(f"{room} == {temperature}")
 
 
 except KeyboardInterrupt:
