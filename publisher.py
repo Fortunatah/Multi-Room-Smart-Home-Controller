@@ -40,7 +40,7 @@ try:
             line = ser.readline().decode('utf-8').rstrip()
             if line:
                 room = get_room(line)
-                print("room")
+                print(room)
 
 
 except KeyboardInterrupt:
