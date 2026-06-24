@@ -41,7 +41,7 @@ try:
             if line:
                 room = get_room(line) ## get the room for publishing
                 
-                temperature = float(line[(line.find(">")):])
+                temperature = float(line[(line.find(">")) + 1:])
                 print(f"{room} == {temperature}")
 
 
